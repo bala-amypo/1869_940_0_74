@@ -20,13 +20,13 @@ public class GobalExceptionHandler{
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<Map<String,String>> handleMethod(MethodArgumentNotValidException mex){
         
-        Map<String,String> error=new HashMap<>();
+        Map<String,String> errors=new HashMap<>();
 
         mex.getBindingResult().getFieldErrors().forEach(error ->
-                error.put(error.getField(), error.getDefaultMessage())
+                errors.put(error.getField(), error.getDefaultMessage())
         );
 
-        return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(errors, HttpStatus.BAD_REQUEST);
     }
 
 }
