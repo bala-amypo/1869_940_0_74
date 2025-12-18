@@ -5,13 +5,13 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-@Entity
-
+@Entity 
 //@Table(name="StudentTable")
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id ;
+    @NotBlank(message="Name filed cannot be empty")
     private String name;
     private String email;
     
