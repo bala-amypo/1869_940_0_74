@@ -9,7 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 
 @RestControllerAdvice
-public class GlobalExceptionHandler{
+public class GobalExceptionHandler{
 
     @ExceptionHandler(ResourceNotFoundException.class) //runtime expection
         public ResponseEntity<String> handleNotFound(ResourceNotFoundException ex){

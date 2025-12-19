@@ -9,7 +9,7 @@ import com.example.demo.service.StudentService;
 import com.example.demo.exception.ResourceNotFoundException;
 
 @Service
-public class StudentServiceImple implements StudentService {
+public class StudentServiceImpl implements StudentService {
     @Autowired
     StudentRepository studentRepository;
 
@@ -23,8 +23,8 @@ public class StudentServiceImple implements StudentService {
     }
     public Student updatedata(Long id,Student student){
         Student exits=getStudentById(id);
-        exits.setName(student.getName());
-        exits.setEmail(student.getEmail());
+        exits setName(student.getName());
+        exits setEmail(student.getEmail());
         return studentRepository.save(exits);
         // .orElseThrow(()-> new ResourceNotFoundException("Student not found"));
     }
