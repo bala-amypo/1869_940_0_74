@@ -23,8 +23,8 @@ public class StudentServiceImpl implements StudentService {
     }
     public Student updatedata(Long id,Student student){
         Student exits=getStudentById(id);
-        exits setName(student.getName());
-        exits setEmail(student.getEmail());
+        exits.setName(student.getName());
+        exits.setEmail(student.getEmail());
         return studentRepository.save(exits);
         // .orElseThrow(()-> new ResourceNotFoundException("Student not found"));
     }
@@ -36,3 +36,6 @@ public class StudentServiceImpl implements StudentService {
     }
 
 }
+
+
+
